@@ -1,3 +1,35 @@
+This is code is a copy of https://github.com/dalab/end2end_neural_el with changes only in the [relatedness.lua](entities/relatedness/relatedness.lua) file. [[1]](#1)
+
+# Training entity embeddings for [neldl](https://github.com/filiprafaj/createreadme):
+- follow the instructions 1.-5. from the original README.md below 
+  - you will install the necessary libraries and create a $DATA_PATH directory
+- copy the `entity_universe.txt` (from step 1. in [neldl](https://github.com/filiprafaj/createreadme)) file  to the root of $DATA_PATH
+- follow the original instructions 6.-14.
+  - in short, you will run following commands
+  ```
+  mkdir $DATA_PATH_FT3/generated/                                         
+  mkdir $DATA_PATH_FT3/generated/test_train_data/  
+  th data_gen/gen_p_e_m/gen_p_e_m_from_wiki.lua -root_data_dir $DATA_PATH
+  th data_gen/gen_p_e_m/merge_crosswikis_wiki.lua -root_data_dir $DATA_PATH
+  th data_gen/gen_p_e_m/gen_p_e_m_from_yago.lua -root_data_dir $DATA_PATH
+  th entities/ent_name2id_freq/e_freq_gen.lua -root_data_dir $DATA_PATH
+  th data_gen/gen_test_train_data/gen_all.lua -root_data_dir $DATA_PATH
+  th data_gen/gen_wiki_data/gen_ent_wiki_w_repr.lua -root_data_dir $DATA_PATH
+  th data_gen/gen_wiki_data/gen_wiki_hyp_train_data.lua -root_data_dir $DATA_PATH
+  th words/w_freq/w_freq_gen.lua -root_data_dir $DATA_PATH
+  th entities/relatedness/filter_wiki_canonical_words_RLTD.lua -root_data_dir $DATA_PATH
+  th entities/relatedness/filter_wiki_hyperlink_contexts_RLTD.lua -root_data_dir $DATA_PATH
+  mkdir $DATA_PATH/generated/ent_vecs                                     
+  th entities/learn_e2v/learn_a.lua -root_data_dir $DATA_PATH
+  ```
+- pick the best embedding file *ent_vecs__ep_XX.t7* (*XX* stands for a corresponding epoch number)
+
+## References
+<a id="1">[1]</a> 
+Kolitsas, Nikolaos & Ganea, Octavian & Hofmann, Thomas. (2018). End-to-End Neural Entity Linking. 519-529. 10.18653/v1/K18-1050. 
+
+# Original README.md:
+
 # Source code for "Deep Joint Entity Disambiguation with Local Neural Attention"
 
 [O-E. Ganea and T. Hofmann, full paper @ EMNLP 2017](https://arxiv.org/abs/1704.04920)
