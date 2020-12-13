@@ -3,7 +3,7 @@ This is code is a copy of https://github.com/dalab/end2end_neural_el with change
 # Training entity embeddings for [neldl](https://github.com/filiprafaj/createreadme):
 - follow the instructions 1.-5. from the original README.md below 
   - you will install the necessary libraries and create a $DATA_PATH directory
-- copy the `entity_universe.txt` (from step 1. in [neldl](https://github.com/filiprafaj/createreadme)) file  to the root of $DATA_PATH
+- copy the `entity_universe.txt` (from step 1. in the [neldl](https://github.com/filiprafaj/createreadme) project) file  to the root of $DATA_PATH
 - follow the original instructions 6.-14.
   - in short, you will run following commands
   ```
