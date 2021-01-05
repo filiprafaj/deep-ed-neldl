@@ -1,6 +1,6 @@
 This is code is a copy of https://github.com/dalab/end2end_neural_el with changes only in the [relatedness.lua](entities/relatedness/relatedness.lua). [[1]](#1)
 
-# Training entity embeddings for [neldl](https://github.com/filiprafaj/createreadme):
+# Training entity embeddings for [neldl](https://github.com/filiprafaj/neldl):
 - follow the instructions 1.-5. from the original README.md below 
   - you will install the necessary libraries and create a $DATA_PATH directory
 - copy the `entity_universe.txt` (from step 1. in the [neldl](https://github.com/filiprafaj/createreadme) project) file  to the root of $DATA_PATH
