@@ -1,4 +1,4 @@
-This is code is a copy of https://github.com/dalab/end2end_neural_el/tree/master/deep-ed/deep-ed-master with changes only in the [relatedness.lua](entities/relatedness/relatedness.lua). [[1]](#1)
+This is code is a copy of https://github.com/dalab/end2end_neural_el/tree/master/deep-ed/deep-ed-master with minor changes only in the [relatedness.lua](entities/relatedness/relatedness.lua). [[1]](#1)
 
 # Training entity embeddings for [neldl](https://github.com/filiprafaj/neldl):
 - follow the instructions 1.-5. from the original README.md below 
